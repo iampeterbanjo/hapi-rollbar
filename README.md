@@ -4,7 +4,7 @@ Hapi [plugin] for [rollbar][1]
 
 ## Getting started
 
-``` JavaScript
+```JavaScript
 const Hapi = require('@hapi/hapi');
 const plugin = require('hapi-rollbar');
 

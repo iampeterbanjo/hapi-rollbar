@@ -25,8 +25,8 @@
 	"scripts": {
 		"deploy": "yarn lint && yarn test && git push && yarn publish",
 		"lint-errors": "prettier --config prettier.config.js --list-different",
-		"lint-fix": "yarn prettier --config prettier.config.js --write ./packages/**/*.{md}",
-		"lint": "yarn eslint --fix-dry-run ./packages/e2e ./packages/server",
+		"lint-fix": "yarn prettier --config prettier.config.js --write ./**/*.{md}",
+		"lint": "yarn eslint --fix-dry-run .",
 		"test": "lab ./__tests__/",
 		"test-watch": "nodemon -e js,json,html,md -x 'yarn test'"
 	},
