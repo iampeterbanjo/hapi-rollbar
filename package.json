@@ -3,6 +3,9 @@
 	"version": "1.0.0",
 	"description": "Hapi plugin for rollbar",
 	"main": "index.js",
+	"engines": {
+		"node": "^10"
+	},
 	"repository": "https://github.com/iampeterbanjo/hapi-rollbar",
 	"author": "os@iampeterbanjo.com",
 	"license": "MIT",
@@ -20,11 +23,15 @@
 		}
 	},
 	"scripts": {
+		"deploy": "yarn lint && yarn test && git push && yarn publish",
 		"lint-errors": "prettier --config prettier.config.js --list-different",
 		"lint-fix": "yarn prettier --config prettier.config.js --write ./packages/**/*.{md}",
 		"lint": "yarn eslint --fix-dry-run ./packages/e2e ./packages/server",
 		"test": "lab ./__tests__/",
 		"test-watch": "nodemon -e js,json,html,md -x 'yarn test'"
+	},
+	"peerDependencies": {
+		"@hapi/hapi": "^18.3.1"
 	},
 	"devDependencies": {
 		"@hapi/code": "^6.0.0",
