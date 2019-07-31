@@ -1,6 +1,6 @@
 {
-	"name": "hapi-rollbar",
-	"version": "1.0.0",
+	"name": "hapi-roller",
+	"version": "1.0.1",
 	"description": "Hapi plugin for rollbar",
 	"main": "index.js",
 	"engines": {
