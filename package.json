@@ -20,6 +20,9 @@
 		}
 	},
 	"scripts": {
+		"lint-errors": "prettier --config prettier.config.js --list-different",
+		"lint-fix": "yarn prettier --config prettier.config.js --write ./packages/**/*.{md}",
+		"lint": "yarn eslint --fix-dry-run ./packages/e2e ./packages/server",
 		"test": "lab ./__tests__/",
 		"test-watch": "nodemon -e js,json,html,md -x 'yarn test'"
 	},
